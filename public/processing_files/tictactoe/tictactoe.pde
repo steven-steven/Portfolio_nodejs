@@ -1,4 +1,4 @@
-/* @pjs preload="/resource/Y.png","/resource/X.png"; */
+/* @pjs preload="Y.png","X.png"; */
 int screenMode = 0;  //0:initScreen 1:gameScreen 2:tieScreen 3:tieScreen
 
 //UI Controls
