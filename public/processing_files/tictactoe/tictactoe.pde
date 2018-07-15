@@ -1,4 +1,4 @@
-/* @pjs preload="processing_files/tictactoe/Y.png","processing_files/tictactoe/X.png"; */
+/* @pjs preload="/resource/Y.png","/resource/X.png"; */
 int screenMode = 0;  //0:initScreen 1:gameScreen 2:tieScreen 3:tieScreen
 
 //UI Controls
