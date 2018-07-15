@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sketch_Book</title>
+  {{>globalScript}}
+  <script> var processingFolderPath = "/processing_files/tictactoe/" </script>
+  <script type="text/javascript" src="processing_files/processing.js"></script>
+</head>
+<body>
+    {{>navigationBar}}
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+    <h1>{{pageTitle}}</h1>
+        <center>
+            <canvas data-processing-sources={{processingPdeFile}}></canvas>
+        </center>
+        {{>footer}}
+    </div>
+</body>
+</html>

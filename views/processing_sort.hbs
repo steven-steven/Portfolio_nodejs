@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sketch_Book</title>
+  {{>globalScript}}
+  <script> var processingFolderPath = "/processing_files/tictactoe/" </script>
+  <script type="text/javascript" src="processing_files/processing.js"></script>
+
+  <script type="text/javascript">
+        function processSort(id) {
+
+            var userInput = document.getElementById("numCsv").value;
+            var quantityInput = document.getElementById("quantity").value;
+
+            var blockNum = parseInt(quantityInput, 10);
+            if (isNaN(blockNum)) { 
+                errorMsg = "'"+blockNum+"' is not a proper integer. Enter proper number for quantity field"; 
+            }else if(blockNum<2 || blockNum >20){
+                errorMsg = "Enter quantity between 2 and 20"; 
+            }
+
+            var errorMsg = "";
+            var tmp = userInput.split(',');
+
+            tmp = tmp.filter((val) => val);
+            if (tmp.length!=blockNum) {
+                errorMsg = "Please enter "+blockNum+" values";
+            }
+            
+            tmp.forEach(function(num) {
+                var parsed = parseInt(num, 10);
+                if (isNaN(parsed)) { 
+                    errorMsg = "'"+num+"' is not a proper integer"; 
+                }
+            });
+
+            if (errorMsg != ""){
+                document.getElementById("errMsg").innerText = errorMsg;
+            }else{
+                document.getElementById("errMsg").innerText = "Nice!";
+                var pjs = Processing.getInstanceById(id);
+                pjs.processAnswer(blockNum, tmp); 
+                document.getElementById(id).style.display = "block";
+                console.log("display");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    {{>navigationBar}}
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <h1>{{pageTitle}}</h1>
+        <center>
+            <canvas style="display:none" id="mysketchcanvasid" data-processing-sources={{processingPdeFile}}></canvas>
+        </center>
+        <label for="quantity"> Enter how many integers to sort (between 1 and 20): </label>
+        <input id="quantity" type="number" name="quantity" min="2" max="20">
+        </br>
+        <label for="numberArray"> Enter your integers (comma seperated, and no space): </label>
+        <input id="numCsv" type="text" name="numberArray">
+        <button onclick="processSort('mysketchcanvasid');"/> Submit</button> 
+        <p id="errMsg"></p>
+        {{>footer}}
+    </div>
+</body>
+</html>

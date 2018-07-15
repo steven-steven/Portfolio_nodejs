@@ -6850,6 +6850,9 @@
     p.loadImage = function(file, type, callback) {
       if (type) file = file + "." + type;
       var pimg;
+      if(processingFolderPath){
+        file = processingFolderPath + file;
+      }
       if (curSketch.imageCache.images[file]) {
         pimg = new PImage(curSketch.imageCache.images[file]);
         pimg.loaded = true;
@@ -10050,7 +10053,10 @@
       operaCache: {},
       add: function(href, img) {
         if (this.images[href]) return;
+        
+        console.log("1");
         if (!isDOMPresent) this.images[href] = null;
+        console.log("2" + isDOMPresent);
         if (!img) {
           img = new Image;
           img.onload = function(owner) {
@@ -10060,6 +10066,7 @@
           }(this);
           this.pending++;
           img.src = href
+          
         }
         this.images[href] = img;
         if (window.opera) {
