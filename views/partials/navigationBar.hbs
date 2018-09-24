@@ -1,6 +1,53 @@
-<ul class="nav">
+{{!-- <ul class="nav">
   <li><a href="/">Home</a></li>
   <li><a href="/tictactoe">TIC TAC TOE</a></li>
   <li><a href="/breaker">Brick Breaker</a></li>
   <li><a href="/insertionSort">Insertion Sort</a></li>
-</ul>
+</ul> --}}
+
+
+  <!-- Sidebar -->
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Steven</h3>
+          <p>lastName = nullptr;</p>
+      </div>
+      
+      <ul class="list-unstyled components">
+          
+          <li>
+              <a href="/">Home</a>
+          </li>
+          <li>
+              <a href="#profileSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Profile</a>
+              <ul class="collapse list-unstyled" id="profileSubmenu">
+                  <li>
+                      <a href="/resume">Resume</a>
+                  </li>
+                  <li>
+                      <a href="/coop">Work Experiences</a>
+                  </li>
+                  <li>
+                      <a href="/clubs">Clubs and Activities</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a href="/contacts">Contact Me</a>
+          </li>
+          <li>
+              <a href="#processingSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Processing Projects</a>
+              <ul class="collapse list-unstyled" id="processingSubmenu">
+                  <li>
+                      <a href="/tictactoe">Tic Tac Toe</a>
+                  </li>
+                  <li>
+                      <a href="/breaker">Brick Breaker</a>
+                  </li>
+                  <li>
+                      <a href="/insertionSort">Insertion Sort Simulator</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </nav>

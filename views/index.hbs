@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sketch_Book</title>
+  <title>Steven</title>
   {{>globalScript}}
   
 </head>
 <body>
-  {{>navigationBar}}
-  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-    <h1>{{pageTitle}}</h1>
-    {{{contents}}}
-    {{>footer}}
-  </div>
+  <div class="wrapper">
+        {{>navigationBar}}
+        <div id="content">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>{{pageTitle}}</h1>
+                </div>
+            </div>
+            <img width="200px" height="300px" src="resource/me.jpg" class="small rounded float-right" alt="profile_picture">
+
+            <p>
+                {{{contents}}}
+                <p style=" font-size:20px; color:black">
+                    I am a Computer Engineering student at the University of Waterloo, expected to be graduating on 2021. I am fascinated in the wrold where we can use technology to solve problems around us. The process of solving problems and finding patterns excites me and is my driving motivaion to keep learning new things. As a newcomer in this field, I want to continue exploring problems that will make me jump out of my seat (out of anger, frustration, but on top of all that.. FUN!). 
+                    <br/><br/>
+                    During my past years in university, things that was a particular interest to me was mobile development, microcontroller systems, data structure and algorithms, and web development (currently working to learn some of the popular frameworks like Node.JS). I have worked with programming languages like C++, Java, Python, Perl, Oscript, C, C#, VHDL(not so much a programming language), Matlab(Just the basics). 
+                    <br/><br/>
+                    Outside of the classroom, I enjoy outdoor running and is a passionate Table Tennis player.
+                    <br/><br/>
+                    Feel free to reach out!
+                </p>
+            </p>
+            {{>footer}}
+        </div>
+    </div>
 
 </body>
 </html>

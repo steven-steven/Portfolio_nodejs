@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steven</title>
+  {{>globalScript}}
+
+    <script>
+        $(document).ready(function() {
+            $(".pdfBlocker").click(function () {
+                if (!$(this).hasClass("active")) {
+                    $(this).addClass("active");
+                }
+            });
+        });
+    </script>
+    <style>
+        /*PDF*/
+        .pdfobject-container { 
+            height: 500px;
+        }
+        .pdfBlocker { 
+            height: auto;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        .pdfBlocker a{
+            position: absolute; 
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+            background-color:rgba(192,192,192,0.3);
+            cursor: pointer;
+            display: block;
+        }
+        .pdfBlocker:hover a{
+            background-color:rgba(99,99,99,0.3);
+            border: 2px solid black;
+        }
+        .pdfBlocker.active:hover a{
+            display: none;
+        }
+        .pdfobject { border: 1px solid #666; }
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+        {{>navigationBar}}
+        <div id="content">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>{{pageTitle}}</h1>
+                </div>
+            </div>
+            {{!-- {{{contents}}} --}}
+            <div class="pdfBlocker"><a></a><div id="pdfContainer"></div></div>
+            <script src="pdfObject/pdfobject.js"></script>
+            <script>
+                    var options = {
+                        pdfOpenParams: { zoom: "70%" },
+                    };
+                    PDFObject.embed("resource/STEVEN-Software.pdf", "#pdfContainer", options);
+                    
+            </script>
+
+            {{>footer}}
+        </div>
+    </div>
+
+</body>
+</html>

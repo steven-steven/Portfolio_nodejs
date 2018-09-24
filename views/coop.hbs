@@ -3,24 +3,21 @@
 <head>
   <title>Steven</title>
   {{>globalScript}}
-  <script> var processingFolderPath = "/processing_files/tictactoe/" </script>
-  <script type="text/javascript" src="processing_files/processing.js"></script>
+  
 </head>
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
         {{>navigationBar}}
         <div id="content">
             <div class="jumbotron jumbotron-fluid">
                 <div class="container">
                     <h1>{{pageTitle}}</h1>
-                    <p>Github: {{github}}</p>
                 </div>
             </div>
-            <center>
-                <canvas data-processing-sources={{processingPdeFile}}></canvas>
-            </center>
+            {{!-- {{{contents}}} --}}
             {{>footer}}
         </div>
     </div>
+
 </body>
 </html>

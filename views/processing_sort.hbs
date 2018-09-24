@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sketch_Book</title>
+    <title>Steven</title>
     {{>globalScript}}
     <script> 
         //var processingFolderPath = "/processing_files/tictactoe/" 
@@ -50,20 +50,29 @@
 
 </head>
 <body>
-    {{>navigationBar}}
-    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-        <h1>{{pageTitle}}</h1>
-        <center>
-            <canvas style="display:none" id="mysketchcanvasid" data-processing-sources={{processingPdeFile}}></canvas>
-        </center>
-        <label for="quantity"> Enter how many integers to sort (between 1 and 20): </label>
-        <input id="quantity" type="number" name="quantity" min="2" max="20">
-        </br>
-        <label for="numberArray"> Enter your integers (comma seperated, and no space): </label>
-        <input id="numCsv" type="text" name="numberArray">
-        <button onclick="processSort('mysketchcanvasid');"/> Submit</button> 
-        <p id="errMsg"></p>
-        {{>footer}}
+    <div class="wrapper">
+        {{>navigationBar}}
+        <div id="content">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>{{pageTitle}}</h1>
+                    <p>Github: {{github}}</p>
+                </div>
+            </div>
+            <center>
+                <canvas style="display:none" id="mysketchcanvasid" data-processing-sources={{processingPdeFile}}></canvas>
+            </center>
+            <label for="quantity"> Enter how many integers to sort (between 1 and 20): </label>
+            <input id="quantity" type="number" name="quantity" min="2" max="20">
+            </br>
+            <label for="numberArray"> Enter your integers (comma seperated, and no space): </label>
+            <input id="numCsv" type="text" name="numberArray">
+            <button onclick="processSort('mysketchcanvasid');"/> Submit</button> 
+            <p id="errMsg"></p>
+            {{>footer}}
+        </div>
     </div>
+    
+       
 </body>
 </html>
