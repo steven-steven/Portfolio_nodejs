@@ -7,20 +7,25 @@
   <script type="text/javascript" src="processing_files/processing.js"></script>
 </head>
 <body>
-    <div class="wrapper">
         {{>navigationBar}}
-        <div id="content">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1>{{pageTitle}}</h1>
-                    <p>Github: {{github}}</p>
+        <div class="ui fluid main container">
+            <div class="ui padded centered grid">
+                <div class="row">
+                    <div class="eight wide column padded">
+                        <div class="ui padded segment">
+                            <h2 class="ui dividing header">
+                                {{pageTitle}}
+                                <p>Github: {{github}}</p>
+                            </h2>
+                            <center>
+                                <canvas data-processing-sources={{processingPdeFile}}></canvas>
+                            </center>
+                        
+                        </div>
+                    </div>
                 </div>
             </div>
-            <center>
-                <canvas data-processing-sources={{processingPdeFile}}></canvas>
-            </center>
-            {{>footer}}
         </div>
-    </div>
+        {{>footer}}
 </body>
 </html>

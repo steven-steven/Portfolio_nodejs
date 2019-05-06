@@ -1,0 +1,83 @@
+
+<div class="ui internally celled grid">
+  <div class="row">
+    <div class="thirteen wide column">
+        <div class="content">
+            <h4 class="ui dividing header">Overview of the current app</h4>
+            <div class="description">
+                <p>This app begin during our coop term in 2019. We gathered people who may be interested with idea, and begin prototyping over various platforms (IOS/Android/Web). The backend is currently deployed in AWS, and this is shared amongst the various platforms.</p>
+                <p>Current status is in progress (in the very beginning stage of prototyping), and after getting the initial main functionalities of the app, we will continue to work on the design in the future.</p>
+            </div>
+            <h4 class="ui dividing header">My Role</h4>
+            <div class="description">
+                <ul>
+                    <li>Collaborated in a team of 6 to create a multiplatform app where users can post/fulfill shopping requests of a limited edition or collector item.</li>
+                    <li>Built the protoype of the website using React Next.js/Redux/Redux-Thunks/Material UI</li>
+                    <li>Built a storybook.js app to track and organize each React components in isolation, for testing and documentation </li>
+                </ul>
+            </div>
+            <h4 class="ui dividing header">Team Members</h4>
+            <div class="description">
+                <ul>
+                    <li>Bob Bao - Android</li>
+                    <li>Jason - Backend</li>
+                    <li>Steven - Web</li>
+                    <li>Alex Guo - Product Designer</li>
+                    <li>Edward Yi Liu - IOS</li>
+                    <li>Yichen Cao - Product</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="three wide column">
+        <span style="" class="ui floated sticky medium rounded image">
+            <img src="resource/melonbunicon.png" alt="melonbun logo">
+        </span>
+        <p>Logo designed by Alex Guo</p>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="three wide column">
+      <img>
+    </div>
+    <div class="thirteen wide column">
+        <h4 class="ui dividing header">Web Architecture Used</h4>
+        <div class="description">
+            <ul>
+                <li>React <u>Next.js</u> framework</li>
+                <li><u>TypeScript</u> for type-checking of components,state,props,etc</li>
+                <li><u>Express.js</u> for server-side rendering of main pages</li>
+                <li><u>Redux-Thunks</u> middleware to manage asynchronous calls to backend</li>
+                <li><u>Redux</u> to manage application state</li>
+                <li><u>Material UI</u> framework for component style</li>
+            </ul>
+        </div>
+        <h4 class="ui dividing header">Current status of Website</h4>
+        <div class="description">
+            <p>When the user enters the app, the page will load first 50 requests from the backend.</p>
+            <p>User can like/unlike a request by clicking an icon, which will add/remove in the Favorites page</p>
+            <p>When selecting an item, a toolbar shows. This toolbar is an HOC that wraps around selectable list components (such as list of requests/items) so it can be reused throughout the app.</p>
+            <p>When creating new request, a modal will display a form (which is reusable component), and send an asynchronous call to submit the request. This is done through redux-thunk's middleware, allowing all the asynchronous side-effects to stay together.</p>
+        </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="thirteen wide column">
+        <h4 class="ui dividing header">Storybook</h4>
+        <div class="description">
+            <p>I integrated a Storybook app to keep track of all UI components used within the product</p>
+            <p>Developers can easily add stories and document all informations of the component, and the TypeScript props that are available for that component.
+                This documentation will make it easy for new incomming team member to collaborate and reuse the components in the future.
+            </p>
+            <p>Storybook also enables us to create test cases for each component in isolation, so this will be an ideal platform for integration/unit testing. Currently that is in the todo list.</p>
+            <p>There are useful open-source addons for Storybook such as Material-UI, actions, and knobs which will make an interactive document where you can change values and components update in real-time.</p>
+        </div>
+    </div>
+    <div class="three wide column">
+      <img>
+    </div>
+  </div>
+</div>

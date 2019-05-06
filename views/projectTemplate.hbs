@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steven</title>
+  {{>globalScript}}
+</head>
+<body>
+    {{>navigationBar}}
+    <div class="ui fluid main container">
+        <div class="ui padded centered grid">
+            <div class="row">
+                <div class="thirteen wide column padded">
+                    <div class="ui padded segment">
+                        <h2 class="ui dividing header">
+                            {{pageTitle}}
+                        </h2>
+
+                        {{#if_eq pageType 'melonbun'}}
+                            {{>page_melonbun}}
+                        {{else}}
+                            {{#if_eq pageType 'instabot'}}
+                                {{>page_instabot}}
+                            {{else}}
+                                {{#if_eq pageType 'tetris'}}
+                                    {{>page_tetris}}
+                                {{else}}
+                                false
+                                {{/if_eq}}
+                            {{/if_eq}}
+                        {{/if_eq}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+</body>
+</html>

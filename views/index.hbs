@@ -6,30 +6,175 @@
   
 </head>
 <body>
-  <div class="wrapper">
-        {{>navigationBar}}
-        <div id="content">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1>{{pageTitle}}</h1>
+    {{>navigationBar}}
+    <div class="ui fluid main container">
+        <div class="ui padded grid">
+            <div class="row">
+                <div class="thirteen wide column padded" id="mainColumn">
+                    <h4 class="ui teal horizontal divider header">
+                        <i class="tag icon"></i>
+                        Description
+                    </h4>
+                    <div class="ui piled segment">
+                        <h4 class="ui header">{{pageTitle}}</h4>
+                        <p>I am a Computer Engineering student at the University of Waterloo, expected to be graduating on 2021. 
+                            I am fascinated in the world where we can use technology to solve problems around us. 
+                            The process of solving problems and finding patterns excites me and is my driving motivaion to keep learning new things. 
+                            As a newcomer in this field, I want to continue exploring problems that will make me jump out of my seat (out of anger, frustration, but on top of all that.. FUN!).</p>
+                        <p>During my past years in university, things that was a particular interest to me are web developement (React/JavaScript), microcontroller systems, data structure and algorithms, graphics (processing), and data science. 
+                            I have worked with programming languages like C++, Java, JavaScript, Python, Perl, Oscript, C, C#, and Processing</p>
+                        <p>Outside of the classroom, I enjoy outdoor running and is a passionate table tennis player.</p>
+                        <p>Feel free to reach out!</p>
+                    </div>
+                    <br/>
+                    <h4 class="ui teal horizontal divider header">
+                        <i class="thumbtack icon"></i>
+                        Quick Links
+                    </h4>
+                    <div class="ui padded stackable three column grid">
+                        <div class="myStackableColumn ui column centered grid">
+                            <button id="toggleNavButton" class="ui inverted orange button">
+                                <i class="icon keyboard"></i>
+                                Projects
+                            </button>
+                        </div>
+                        <div class="myStackableColumn ui column centered grid">
+                            <a href="/experiences" class="ui inverted olive button">
+                                <i class="icon handshake outline"></i>
+                                Communities/Work Experiences
+                            </a>
+                        </div>
+                        <div class="myStackableColumn ui column centered grid">
+                            <a href="/contacts" class="ui inverted violet button">
+                                <i class="icon user"></i>
+                                Contacts
+                            </a>
+                        </div>
+                    </div>
+                        
+                        
+                        
+
+                    <br/>
+                    <h4 class="ui teal horizontal divider header">
+                        <i class="bar chart icon"></i>
+                        Skill Set & Project Highlights
+                    </h4>
+                    <div class="ui yellow tall stacked segment">
+
+                        <a class="ui red ribbon label">React/Redux</a>
+                        <div class="ui relaxed divided list">
+                            <a class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <div class="header">2019 Winter Coop at IBM</div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Worked closely with the development team to resolve regressions and client issues with React/Redux, C#, and Java</li>
+                                            <li>Secured API endpoints from modification of read-only input fields</li>
+                                            <li>Found and resolved several edge case bugs with rendering a tree of data-sources dependencies.</li>
+                                            <li>Rewritten and improved the existing code for adding/removing table rows in the React buffer and C# endpoint</li>
+                                            <li>Solved critical erros for sorting rows, locale formatting, switching context of grid frames, etc.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <div class="header">MelonBun</div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Collaborated in a team of 6 to create a multiplatform app where users can post/fulfill shopping requests of a limited ediion or collector item.</li>
+                                            <li>Built the protoype of the web app using React Next.js/Redux/Redux-Thunks/Material UI</li>
+                                            <li>Built a storybook.js app to track and organize each React components in isolation, for testing and documentation </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item">
+                                <i class="large github middle aligned icon"></i>
+                                <div class="content">
+                                    <a href="https://github.com/melonbun-dev/melonbun-web" target="_blank" class="header">melonbun-dev/melonbun-web</a>
+                                    <div class="description">Code Repository for Melonbun and storybook.js web app</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+
+                        <a class="ui red ribbon label">Python</a>
+                        <div class="ui relaxed divided list">
+                            <a class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <div class="header">Tetris game</div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Guided by: A tutorial series by FreeCodeCamp's Tech With Tim</li>
+                                            <li>Created additional spacebar implementation to send current piece straight down</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <a class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <div class="header">Instagram Bot</div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Built an automated bot with Selenium Web Driver capable of searching, liking, commenting Instagram posts.</li>
+                                            <li>Creaed a sample test that generates 200 automated comments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="item">
+                                <i class="large github middle aligned icon"></i>
+                                <div class="content">
+                                    <a href="https://github.com/steven-steven/PythonGames" target="_blank" class="header">steven-steven/PythonGames</a>
+                                    <div class="description">Code Repository for Tetris Game</div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large github middle aligned icon"></i>
+                                <div class="content">
+                                    <a href="https://github.com/steven-steven/SeleniumWebDriver" target="_blank" class="header">steven-steven/SeleniumWebDriver</a>
+                                    <div class="description">Code Repository for Instagram Bot</div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <a class="ui red ribbon label">Data Science</a>
+                        <div class="ui relaxed divided list">
+                            <div class="item">
+                                <i class="right triangle icon"></i>
+                                <div class="content">
+                                    <div class="header">Online <a href="https://www.udemy.com/machinelearning/" target="_blank">Udemy course on Machine Learning</a></div>
+                                    <div class="description">
+                                        <ul>
+                                            <li>Use Python Data Science libraries like 'Pandas', 'Matplotlib', and 'Scikit-learn'</li>
+                                            <li>Preprocess data (impute missing data, encode categorical data with labelEncoder or OneHotENcoder, feature scaling, etc.)</li>
+                                            <li>Implemented Simple Linear Regression and Multiple Linear Regression model with Scikit-learn</li>
+                                            <li>Learn concepts for selecting predictors using Backward Elimination, Forward Selection, Bidirectional Elimination, etc</li>
+                                            <li>(Currently in Progress...)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <span style="" class="ui floated sticky small rounded image">
+                        <img src="resource/me2.jpg" alt="profile_picture">
+                    </span>
                 </div>
             </div>
-            <img width="250px" src="resource/me2.jpg" class="img-thumbnail rounded float-right" alt="profile_picture">
-
-            <p>
-                {{{contents}}}
-                <p style=" font-size:20px; color:black">
-                    I am a Computer Engineering student at the University of Waterloo, expected to be graduating on 2021. I am fascinated in the world where we can use technology to solve problems around us. The process of solving problems and finding patterns excites me and is my driving motivaion to keep learning new things. As a newcomer in this field, I want to continue exploring problems that will make me jump out of my seat (out of anger, frustration, but on top of all that.. FUN!). 
-                    <br/><br/>
-                    During my past years in university, things that was a particular interest to me was mobile development, microcontroller systems, data structure and algorithms, graphics (processing), and web development (currently working to learn Node.JS frameworks). I have worked with programming languages like C++, Java, Python, Perl, Oscript, C, C#, Processing, VHDL(not so much a programming language), Matlab(Just the basics). 
-                    <br/><br/>
-                    Outside of the classroom, I enjoy outdoor running and is a passionate Table Tennis player.
-                    <br/><br/>
-                    Feel free to reach out!
-                </p>
-            </p>
-            {{>footer}}
         </div>
+        {{>footer}}
     </div>
 
 </body>

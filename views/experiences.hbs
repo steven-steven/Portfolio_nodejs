@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Steven</title>
+  {{>globalScript}}
+  
+</head>
+<body>
+    {{>navigationBar}}
+    <div class="ui fluid main container">
+        <div class="ui padded centered grid">
+            
+            <div class="row">
+                <div class="thirteen wide column padded">
+
+                    <!--Menu-->
+                    <div class="ui pointing menu">
+                        <a class="item active" data-tab="coop">
+                            Work Experience
+                        </a>
+                        <a class="item" data-tab="clubs">
+                            Communities & Clubs
+                        </a>
+                    </div>
+
+                    <div class="ui padded segment">
+                        {{!-- {{{contents}}} --}}
+                        <div class="ui active tab" data-tab="coop">
+                            <!-- Tab Content !-->
+                            
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <div class="ui vertical fluid tabular menu">
+                                    <a class="item" data-tab="intellisoft">
+                                        Intellisoft Development Inc (Jan-Apr 2017)
+                                    </a>
+                                    <a class="item" data-tab="opentext1">
+                                        Opentext (Sept-Dec 2017)
+                                    </a>
+                                    <a class="item" data-tab="opentext2">
+                                        Opentext (May-Aug 2018)
+                                    </a>
+                                    <a class="item active" data-tab="ibm">
+                                        IBM (Jan-Apr 2019)
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="twelve wide stretched column">
+                                    <div class="ui tab segment" data-tab="intellisoft">
+                                     Intellisoft
+                                    </div>
+                                    <div class="ui tab segment" data-tab="opentext1">
+                                     Opentext
+                                    </div>
+                                    <div class="ui tab segment" data-tab="opentext2">
+                                     Opentext2
+                                    </div>
+                                    <div class="ui active tab segment" data-tab="ibm">
+                                     IBM
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="ui tab" data-tab="clubs">
+                        <!-- Tab Content !-->
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <div class="ui vertical fluid tabular menu">
+                                        <a class="active item" data-tab="UWRobotics">
+                                            UW Robotics
+                                        </a>
+                                        <a class="item" data-tab="TableTennis">
+                                            Table Tennis
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="twelve wide stretched column">
+                                    <div class="ui active tab segment" data-tab="UWRobotics">
+                                     UW Robotics
+                                    </div>
+                                    <div class="ui tab segment" data-tab="TableTennis">
+                                     Table Tennis
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{>footer}}
+
+</body>
+</html>

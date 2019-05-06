@@ -50,28 +50,35 @@
 
 </head>
 <body>
-    <div class="wrapper">
+    
         {{>navigationBar}}
-        <div id="content">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1>{{pageTitle}}</h1>
-                    <p>Github: {{github}}</p>
+        <div class="ui fluid main container">
+            <div class="ui padded centered grid">
+                <div class="row">
+                    <div class="eight wide column padded">
+                        <div class="ui padded segment">
+                            <h2 class="ui dividing header">
+                                {{pageTitle}}
+                                <p>Github: {{github}}</p>
+                            </h2>
+
+                            <center>
+                                <canvas style="display:none" id="mysketchcanvasid" data-processing-sources={{processingPdeFile}}></canvas>
+                            </center>
+                            <label for="quantity"> Enter how many integers to sort (between 1 and 20): </label>
+                            <input id="quantity" type="number" name="quantity" min="2" max="20">
+                            </br>
+                            <label for="numberArray"> Enter your integers (comma seperated, and no space): </label>
+                            <input id="numCsv" type="text" name="numberArray">
+                            <button onclick="processSort('mysketchcanvasid');"/> Submit</button> 
+                            <p id="errMsg"></p>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <center>
-                <canvas style="display:none" id="mysketchcanvasid" data-processing-sources={{processingPdeFile}}></canvas>
-            </center>
-            <label for="quantity"> Enter how many integers to sort (between 1 and 20): </label>
-            <input id="quantity" type="number" name="quantity" min="2" max="20">
-            </br>
-            <label for="numberArray"> Enter your integers (comma seperated, and no space): </label>
-            <input id="numCsv" type="text" name="numberArray">
-            <button onclick="processSort('mysketchcanvasid');"/> Submit</button> 
-            <p id="errMsg"></p>
-            {{>footer}}
+            </div/>
         </div>
-    </div>
+        {{>footer}}
     
        
 </body>

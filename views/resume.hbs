@@ -16,7 +16,7 @@
     <style>
         /*PDF*/
         .pdfobject-container { 
-            height: 500px;
+            height: 600px;
         }
         .pdfBlocker { 
             height: auto;
@@ -45,28 +45,31 @@
     </style>
 </head>
 <body>
-  <div class="wrapper">
-        {{>navigationBar}}
-        <div id="content">
-            <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                    <h1>{{pageTitle}}</h1>
+    {{>navigationBar}}
+    <div class="ui fluid main container">
+        <div class="ui padded centered grid">
+            <div class="row">
+                <div class="eight wide column padded">
+                    <div class="ui padded segment">
+                        <h2 class="ui dividing header">
+                            {{pageTitle}}
+                        </h2>
+                        {{!-- {{{contents}}} --}}
+                        <div class="pdfBlocker"><a></a><div id="pdfContainer"></div></div>
+                        <script src="pdfObject/pdfobject.js"></script>
+                        <script>
+                                var options = {
+                                    pdfOpenParams: { zoom: "70%" },
+                                };
+                                PDFObject.embed("resource/STEVEN-Software.pdf", "#pdfContainer", options);
+                                
+                        </script>
+                    </div>
                 </div>
             </div>
-            {{!-- {{{contents}}} --}}
-            <div class="pdfBlocker"><a></a><div id="pdfContainer"></div></div>
-            <script src="pdfObject/pdfobject.js"></script>
-            <script>
-                    var options = {
-                        pdfOpenParams: { zoom: "70%" },
-                    };
-                    PDFObject.embed("resource/STEVEN-Software.pdf", "#pdfContainer", options);
-                    
-            </script>
-
-            {{>footer}}
         </div>
     </div>
+    {{>footer}}
 
 </body>
 </html>

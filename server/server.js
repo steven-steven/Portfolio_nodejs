@@ -12,6 +12,13 @@ app.use( express.static( publicPath ) );
 
 //setup Handlebar: view template engine and partials
 app.set( 'view engine', 'hbs');
+//helper
+hbs.registerHelper('if_eq', function(a, b, opts) {
+    if(a == b)
+        return opts.fn(this);
+    else
+        return opts.inverse(this);
+});
 hbs.registerPartials( viewsPath + '/partials' )
 
 //setup heroku
@@ -22,7 +29,7 @@ app.listen( port, ()=>{console.log(`Server up on port ${port}`)});
 //handle page requests
 app.get('/', (req, res)=>{
     res.render('index.hbs', {
-        pageTitle: "Welcome. Know more about me!",
+        pageTitle: "Hi! Welcome.",
         contents: "Note: This site is currently in progress. I am conveting the old site (which uses static html/css/js) to use the Node.js/Express framework."
     });
 });
@@ -32,14 +39,9 @@ app.get('/resume', (req, res)=>{
         pageTitle: "Resume"
     });
 });
-app.get('/coop', (req, res)=>{
-    res.render('coop.hbs', {
-        pageTitle: "Work Experiences"
-    });
-});
-app.get('/clubs', (req, res)=>{
-    res.render('clubs.hbs', {
-        pageTitle: "Clubs and Activities"
+app.get('/experiences', (req, res)=>{
+    res.render('experiences.hbs', {
+        
     });
 });
 app.get('/contacts', (req, res)=>{
@@ -70,3 +72,22 @@ app.get('/insertionSort', (req, res)=>{
     });
 });
 
+app.get('/melonbun', (req, res)=>{
+    res.render('projectTemplate.hbs', {
+        pageTitle: "Melon Bun",
+        pageType: "melonbun"
+    });
+});
+
+app.get('/tetris', (req, res)=>{
+    res.render('projectTemplate.hbs', {
+        pageTitle: "Python - Tetris",
+        pageType: "tetris"
+    });
+});
+app.get('/instabot', (req, res)=>{
+    res.render('projectTemplate.hbs', {
+        pageTitle: "Instagram Bot",
+        pageType: "instabot"
+    });
+});
