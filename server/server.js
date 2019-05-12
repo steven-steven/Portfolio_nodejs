@@ -53,21 +53,21 @@ app.get('/contacts', (req, res)=>{
 app.get('/breaker', (req, res)=>{
     res.render('processing.hbs', {
         pageTitle: "Brick Breaker",
-        github: "github.com/steven-steven/Breaker_Game_Processing",
+        github: "https://www.github.com/steven-steven/Breaker_Game_Processing",
         processingPdeFile: "processing_files/breaker/breaker.pde"
     });
 });
 app.get('/tictactoe', (req, res)=>{
     res.render('processing.hbs', {
         pageTitle: "Tic Tac Toe",
-        github: "github.com/steven-steven/TicTacToe",
+        github: "https://www.github.com/steven-steven/TicTacToe",
         processingPdeFile: "processing_files/tictactoe/tictactoe.pde"
     });
 });
 app.get('/insertionSort', (req, res)=>{
     res.render('processing_sort.hbs', {
         pageTitle: "Insertion Sort",
-        github: "github.com/steven-steven/Sorting_Sketch",
+        github: "https://www.github.com/steven-steven/Sorting_Sketch",
         processingPdeFile: "processing_files/sorting/sorting.pde"
     });
 });

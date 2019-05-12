@@ -3,6 +3,14 @@
   <div class="row">
     <div class="thirteen wide column">
         <div class="content">
+            <h4 class="ui dividing header">Links</h4>
+            <div class="description">
+                <span>Site: <a target="_blank" href="https://melonbun.herokuapp.com/">https://melonbun.herokuapp.com/</a></span>
+                <br/>
+                <span>Storybook: <a target="_blank" href="https://melonbun-dev.github.io/melonbun-web/">https://melonbun-dev.github.io/melonbun-web/</a></span>
+                <br/>
+                <span>Github(Web): <a target="_blank" href="https://github.com/melonbun-dev/melonbun-web">https://github.com/melonbun-dev/melonbun-web</a></span>
+            </div>
             <h4 class="ui dividing header">Overview of the current app</h4>
             <div class="description">
                 <p>This app begin during our coop term in 2019. We gathered people who may be interested with idea, and begin prototyping over various platforms (IOS/Android/Web). The backend is currently deployed in AWS, and this is shared amongst the various platforms.</p>
@@ -20,7 +28,7 @@
             <div class="description">
                 <ul>
                     <li>Bob Bao - Android</li>
-                    <li>Jason - Backend</li>
+                    <li>Jason Hong - Backend</li>
                     <li>Steven - Web</li>
                     <li>Alex Guo - Product Designer</li>
                     <li>Edward Yi Liu - IOS</li>
@@ -39,10 +47,26 @@
 
 
   <div class="row">
-    <div class="three wide column">
-      <img>
+    <div class="four wide column grid">
+        <div class="ui three row grid">
+            <div class="ui row">
+                <span style="" class="ui floated sticky large bordered rounded image">
+                    <img src="resource/melon1.png" alt="melonbun index page">
+                </span>
+            </div>
+            <div class="ui row">
+                <span style="" class="ui floated sticky large bordered rounded image">
+                    <img src="resource/melon2.png" alt="melonbun drawer">
+                </span>
+            </div>
+            <div class="ui row">
+                <span style="" class="ui floated sticky large bordered rounded image">
+                    <img src="resource/melon3.png" alt="melonbun forms">
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="thirteen wide column">
+    <div class="twelve wide column">
         <h4 class="ui dividing header">Web Architecture Used</h4>
         <div class="description">
             <ul>
@@ -58,14 +82,14 @@
         <div class="description">
             <p>When the user enters the app, the page will load first 50 requests from the backend.</p>
             <p>User can like/unlike a request by clicking an icon, which will add/remove in the Favorites page</p>
-            <p>When selecting an item, a toolbar shows. This toolbar is an HOC that wraps around selectable list components (such as list of requests/items) so it can be reused throughout the app.</p>
-            <p>When creating new request, a modal will display a form (which is reusable component), and send an asynchronous call to submit the request. This is done through redux-thunk's middleware, allowing all the asynchronous side-effects to stay together.</p>
+            <p>When selecting an item, a toolbar shows. This toolbar is an HOC (Higher-order component) that wraps around selectable list components (such as list of requests/items) so it can be reused throughout the app.</p>
+            <p>When creating new request, a modal will display a form (which is a reusable component), and send an asynchronous call to submit the request. This is done through redux-thunk's middleware, allowing all the asynchronous side-effects to be managed in one place.</p>
         </div>
     </div>
   </div>
 
   <div class="row">
-    <div class="thirteen wide column">
+    <div class="ten wide column">
         <h4 class="ui dividing header">Storybook</h4>
         <div class="description">
             <p>I integrated a Storybook app to keep track of all UI components used within the product</p>
@@ -76,8 +100,21 @@
             <p>There are useful open-source addons for Storybook such as Material-UI, actions, and knobs which will make an interactive document where you can change values and components update in real-time.</p>
         </div>
     </div>
-    <div class="three wide column">
-      <img>
+    <div class="six wide column">
+        
+        
+        <span style="" class="ui right floated sticky large rounded image">
+            Storybook environment
+            <img src="resource/storybook1.png" alt="melonbun structure">
+        </span>
+        
+        
+        <span style="" class="ui right floated sticky large rounded image">
+            Component documentation
+            <img src="resource/storybook2.png" alt="storybook info page">
+        </span>
+        <br/>
+        
     </div>
   </div>
 </div>
