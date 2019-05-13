@@ -16961,7 +16961,7 @@ $.fn.sidebar.settings = {
       bottom : 'overlay'
     },
     mobile: {
-      left   : 'uncover',
+      left   : 'overlay',
       right  : 'uncover',
       top    : 'overlay',
       bottom : 'overlay'

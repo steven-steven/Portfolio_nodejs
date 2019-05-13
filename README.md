@@ -6,4 +6,5 @@ Currently in progress.
 
 Instructions:
 - Run Locally: 'node server/server.js'
+- Run 'gulp build' in /public/semantics/ to build semantic overrides
 - Publish: 'git push heroku master'
