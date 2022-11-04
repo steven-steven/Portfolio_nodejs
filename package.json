@@ -16,6 +16,6 @@
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "lodash": "^4.17.11",
-    "semantic-ui": "^2.4.2"
+    "semantic-ui": "^2.5.0"
   }
 }
